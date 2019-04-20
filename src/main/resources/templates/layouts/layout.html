@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  	<head>
+  		<meta charset="utf-8">
+		<title>Todo List</title>
+		<meta name="description" content="Todo list application" />
+		<meta name="author" content="mtafougalti" />
+	  	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	    <link rel="stylesheet" href="css/bootstrap.css">
+	    
+	    <!-- Theme Style -->
+	    <link rel="stylesheet" href="css/style.css">
+	</head>
+    <body>
+    	<div id="wrapper">
+	        <span th:replace="fragments/header :: header"> This header content is going to be replaced.</span>
+	        <section id="content">
+		        <div class="container">
+		            <div class="row">
+		                <div class="span12" layout:fragment="content">
+		                    <h1>This is the Layout's main section</h1>
+		                    <p>This content will be replaced if the page
+		                        using the layout also defines a layout:fragment="content" segment. </p>
+		                </div>
+		            </div>
+		        </div>
+	        </section>
+	        <span th:insert="fragments/footer :: footer" class="footer">
+	            This content will remain, but other content will be inserted after it.
+	        </span>
+        </div>
+  <!-- javascript
+    ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.js"></script>
+
+  <!-- Template Custom JavaScript File -->
+  <script src="js/custom.js"></script>
+  <script>
+	
+	$(window).scroll(function(){
+	    if ($(window).scrollTop() >= 50) {
+	        $('#header').addClass('fixed');
+	    }
+	    else {
+	        $('#header').removeClass('fixed');
+	    }
+	});
+  </script>
+    </body>
+</html>

@@ -1,0 +1,23 @@
+<section xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.w3.org/1999/xhtml" layout:decorate="~{layouts/layout}">
+	<div layout:fragment="content">
+		<h3>Instruments list</h3>
+		<table class="table table-bordered table-dark">
+		  <thead>
+		    <tr>
+		      <th scope="col">Id</th>
+		      <th scope="col">Name</th>
+		      <th scope="col">Description</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		    <tr th:each="todo : ${list}">
+		      <td><span th:text="${todo.id}"> ... </span></td>
+		      <td><span th:text="${todo.name}"> ... </span></td>
+		      <td><span th:text="${todo.description}"> ... </span></td>
+		    </tr>
+		  </tbody>
+		</table>
+	</div>
+</section>
+
