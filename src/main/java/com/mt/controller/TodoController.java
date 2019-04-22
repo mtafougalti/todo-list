@@ -18,6 +18,7 @@ public class TodoController {
 		list.add(new Todo(2, "Todo2", "Todo task 2"));
 		list.add(new Todo(3, "Todo3", "Todo task 3"));
 		list.add(new Todo(4, "Todo4", "Todo task 4"));
+		list.add(new Todo(4, "Todo5", "Todo task 5"));
 		model.addAttribute("list", list);
 		return "todos";
 	}
